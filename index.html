@@ -1,8 +1,5 @@
 <link href="base.css" rel="stylesheet" style="text/css">
-<script>const randomito = document.getElementById('boton');
-const texto = document.getElementById('prueba');
-
-function randomizer(){
+<script>function randomizer(){
   min = Math.ceil(0);
   max = Math.floor(16777215);
   resultado = Math.floor(Math.random() * (max - min) + min)
@@ -12,13 +9,13 @@ function randomizer(){
       pasoAHex = "0" + pasoAHex;
     }
   }
-  texto.value = "#"+ pasoAHex;
+  document.getElementById('prueba').value = "#"+ pasoAHex;
   document.body.style.backgroundColor = texto.value;
 }
 
 randomizer();
 
-randomito.addEventListener("click",randomizer);</script>
+document.getElementById('boton').addEventListener("click",randomizer);</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <center>
   <div class="base">
