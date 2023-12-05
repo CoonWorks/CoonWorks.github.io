@@ -1,19 +1,5 @@
 <link href="base.css" rel="stylesheet" style="text/css">
-<script>function randomizer(){
-  var min = Math.ceil(0);
-  var max = Math.floor(16777215);
-  var resultado = Math.floor(Math.random() * (max - min) + min)
-  var pasoAHex = resultado.toString(16);
-  for (i = 0; i <= 6; i++){
-    if(pasoAHex.length < i){
-      pasoAHex = "0" + pasoAHex;
-    }
-  }
-  document.getElementById('prueba').value = "#"+ pasoAHex;
-  document.body.style.backgroundColor = texto.value;
-}
-
-randomizer();</script>
+<script src="base.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <center>
   <div class="base">
