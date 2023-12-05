@@ -1,4 +1,4 @@
-const rando = document.getElementById('boton');
+const randomito = document.getElementById('boton');
 const texto = document.getElementById('prueba');
 
 function randomizer(){
@@ -17,4 +17,4 @@ function randomizer(){
 
 randomizer();
 
-rando.addEventListener("click",randomizer);
+randomito.addEventListener("click",randomizer);
