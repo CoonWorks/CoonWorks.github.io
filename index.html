@@ -1,9 +1,9 @@
 <link href="base.css" rel="stylesheet" style="text/css">
 <script>function randomizer(){
-  min = Math.ceil(0);
-  max = Math.floor(16777215);
-  resultado = Math.floor(Math.random() * (max - min) + min)
-  pasoAHex = resultado.toString(16);
+  var min = Math.ceil(0);
+  var max = Math.floor(16777215);
+  var resultado = Math.floor(Math.random() * (max - min) + min)
+  var pasoAHex = resultado.toString(16);
   for (i = 0; i <= 6; i++){
     if(pasoAHex.length < i){
       pasoAHex = "0" + pasoAHex;
