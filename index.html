@@ -13,12 +13,10 @@
   document.body.style.backgroundColor = texto.value;
 }
 
-randomizer();
-
-document.getElementById('boton').addEventListener("click",randomizer());</script>
+randomizer();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <center>
   <div class="base">
   <input type="text" id="prueba" value="#FFFFFF" readonly="readonly"></input>
-<input type="button" id="boton" value="RNG"></input>
+<input type="button" id="boton" value="RNG" onclick="randomizer"></input>
 </div>
