@@ -13,3 +13,5 @@ function randomizer(){
 }
 
 randomizer();
+
+document.getElementById('boton').addEventListener('click',randomizer());
