@@ -1,5 +1,22 @@
 <link href="base.css" rel="stylesheet" style="text/css">
-<script src="base.js"></script>
+<script>function randomizer(){
+  var min = Math.ceil(0);
+  var max = Math.floor(16777215);
+  var resultado = Math.floor(Math.random() * (max - min) + min)
+  var pasoAHex = resultado.toString(16);
+  for (i = 0; i <= 6; i++){
+    if(pasoAHex.length < i){
+      pasoAHex = "0" + pasoAHex;
+    }
+  }
+  document.getElementById('prueba').value = "#"+ pasoAHex;
+  document.body.style.backgroundColor = document.getElementById('prueba').value;
+}
+
+randomizer();
+
+document.getElementById('boton').addEventListener('click',randomizer());
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <body>
   <center>
