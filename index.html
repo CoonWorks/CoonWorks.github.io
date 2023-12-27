@@ -1,27 +1,33 @@
-<link href="base.css" rel="stylesheet" style="text/css">
-<script>function randomizer(){
-  var min = Math.ceil(0);
-  var max = Math.floor(16777215);
-  var resultado = Math.floor(Math.random() * (max - min) + min)
-  var pasoAHex = resultado.toString(16);
-  for (i = 0; i <= 6; i++){
-    if(pasoAHex.length < i){
-      pasoAHex = "0" + pasoAHex;
+<html lang="es-es">
+  <head>
+    <title>Randomizer de color de fondo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="base.css" rel="stylesheet" style="text/css">
+    <script>function randomizer(){
+      var min = Math.ceil(0);
+      var max = Math.floor(16777215);
+      var resultado = Math.floor(Math.random() * (max - min) + min)
+      var pasoAHex = resultado.toString(16);
+      for (i = 0; i <= 6; i++){
+        if(pasoAHex.length < i){
+          pasoAHex = "0" + pasoAHex;
+        }
+      }
+      document.getElementById('prueba').value = "#"+ pasoAHex;
+      document.body.style.backgroundColor = document.getElementById('prueba').value;
     }
-  }
-  document.getElementById('prueba').value = "#"+ pasoAHex;
-  document.body.style.backgroundColor = document.getElementById('prueba').value;
-}
 
-randomizer();
+    randomizer();
 
-document.getElementById('boton').addEventListener('click',randomizer());
-</script>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<body>
+    document.getElementById('boton').addEventListener('click',randomizer());
+    </script>
+  </head>
+  <body>
   <center>
     <div class="base">
       <input type="text" id="prueba" value="#FFFFFF" readonly="readonly"></input>
       <input type="button" id="boton" value="RNG"></input>
     </div>
-</body>
+  </body>
+</html>
