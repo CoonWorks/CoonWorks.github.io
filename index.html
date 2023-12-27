@@ -19,15 +19,13 @@
     }
 
     randomizer();
-
-    document.getElementById('boton').addEventListener('click',randomizer());
     </script>
   </head>
   <body>
   <center>
     <div class="base">
       <input type="text" id="prueba" value="" readonly="readonly"></input>
-      <input type="button" id="boton" value="RNG"></input>
+      <input type="button" id="boton" value="RNG" onclick="randomizer()"></input>
     </div>
   </body>
 </html>
