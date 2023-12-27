@@ -17,11 +17,9 @@
       document.getElementById('prueba').value = "#"+ pasoAHex;
       document.body.style.backgroundColor = document.getElementById('prueba').value;
     }
-
-    randomizer();
     </script>
   </head>
-  <body>
+  <body onload="randomizer()">
   <center>
     <div class="base">
       <input type="text" id="prueba" value="" readonly="readonly"></input>
